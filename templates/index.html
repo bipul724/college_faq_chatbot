@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ college }} – Student Help Desk</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head><body>
+<main>
+  <header>
+    <h1>Student help desk</h1>
+    <p>Ask about fees, attendance, exams, hostel, library or placements. Answers come from {{ college }} documents.</p>
+  </header>
+  <div id="chat" role="log" aria-live="polite">
+    <div class="msg bot">Hi! Ask me anything about the college, or try a question below.</div>
+  </div>
+  <div class="chips">
+    <button class="chip">What is the minimum attendance required?</button>
+    <button class="chip">How do I apply for a hostel room?</button>
+    <button class="chip">When can I borrow books from the library?</button>
+  </div>
+  <form id="f"><input id="q" maxlength="500" placeholder="Type your question" autocomplete="off" required>
+  <button>Ask</button></form>
+  <footer>{{ student.name }} · Roll {{ student.roll }} · {{ student.branch }}, {{ student.college }}</footer>
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
