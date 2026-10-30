@@ -1,0 +1,19 @@
+# Virtual environment
+venv/
+.venv/
+
+# Local config (keep .env.example)
+.env
+
+# Generated vector database (rebuilt by rag/ingest.py)
+data/chroma_db/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
